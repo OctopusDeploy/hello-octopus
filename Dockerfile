@@ -18,4 +18,4 @@ COPY package*.json ./
 RUN npm install --only=production
 COPY --from=build /usr/dist .
 EXPOSE 8080
-ENTRYPOINT ["node", "."]
+CMD ["node", "."]
