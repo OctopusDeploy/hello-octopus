@@ -29,22 +29,22 @@
                     <img src="IMAGES/boat.svg" alt="Boat">
                   </div>
                   <h1 class="mb-3">Hello Octopus</h1>
-                  <p>This sample project demonstrates how an application can be deployed using Octopus Deploy.</p>
+                  <p>This sample project demonstrates an application deployed using Octopus Deploy</p>
                 </header>
                 <div class="deployment-details__basic mb-4">
                   <table class="deployment-details__table">
                     <tbody>
                       <tr>
-                        <th>Latest deployment</th>
-                        <td>6 seconds ago</td>
-                      </tr>
-                      <tr>
                         <th>Environment</th>
-                        <td>Staging</td>
+                        <td><%= environment %></td>
                       </tr>
                       <tr>
                         <th>Release</th>
                         <td>1.0.1</td>
+                      </tr>
+                      <tr>
+                          <th>Last deployed</th>
+                          <td>6 seconds ago</td>
                       </tr>
                     </tbody>
                   </table>

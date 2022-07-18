@@ -5,10 +5,14 @@ const app = express();
 const port = 8080; 
 const staticPath = path.join(__dirname, 'static');
 
+app.set('view engine', 'ejs');
+
 app.use('/', express.static(staticPath));
 
 app.get( "/", ( req, res ) => {
-    res.sendFile(path.join(staticPath, 'index.html'));
+    res.render('index', {
+        environment: process.env.environment ?? "Unknown"
+    })
 } );
 
 app.listen( port, () => {

@@ -4,15 +4,16 @@
   "description": "Sample application to demonstrate Octopus Deploy",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp -R ./src/static ./dist/static",
+    "build": "tsc && cp -R ./src/static ./dist/static && cp -R ./src/views ./dist/views",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "cd ./dist && node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Octopus Deploy",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.17.2"
   },
   "devDependencies": {
